@@ -14,9 +14,10 @@ spec:
     spec:
       containers:
       - name: hello-container
-        image: hello-world-app
+        image: app
         ports:
         - containerPort: 5000
+        imagePullPolicy: Never
         env:
         - name: MESSAGE
           valueFrom:

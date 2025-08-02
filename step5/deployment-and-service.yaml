@@ -14,10 +14,10 @@ spec:
     spec:
       containers:
         - name: flask-auth-container
-          image: your-dockerhub/flask-auth-app:latest
+          image: app
+          imagePullPolicy: Never
           ports:
             - containerPort: 5000
-            imagePullPolicy: Never
           env:
             - name: USERNAME
               valueFrom:
